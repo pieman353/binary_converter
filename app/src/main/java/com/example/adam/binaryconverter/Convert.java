@@ -25,7 +25,8 @@ public class Convert {
         String answer = "";
         int count = 0;
         while (count < original.length()) {
-            if (original.charAt(count) != '0' || original.charAt(count) != '1') {
+            if (original.charAt(count) != '0' && original.charAt(count) != '1'
+                    && original.charAt(count) != ' ') {
                 return new String[] {answer, "1"};
             }
             if (Character.isDigit(original.charAt(count))) {
